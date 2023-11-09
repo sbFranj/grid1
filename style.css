@@ -1,0 +1,70 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.container{
+    background-color: red;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
+    grid-template-rows: 
+    150px 
+    80px
+    250px
+    1fr;
+    grid-template-areas: 
+    "header header header header header"
+    "options options options options options"
+    ". adds adds adds ."
+    ". content content recomend  ."
+
+}
+
+.header{
+    background-color: rgb(48, 48, 48);
+    grid-area: header;
+}
+
+.options{
+    background-color: gray;
+    grid-area: options;
+}
+
+.adds{
+    background-color: yellow;
+    grid-area: adds;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.content{
+    background-color: white;
+    grid-area: content;
+    margin-right: 2%;
+}
+
+.recomend{
+    background-color: rgb(212, 94, 114);
+    grid-area: recomend;
+}
+
+@media screen and (max-width:480px){
+
+    .container{
+        
+        grid-template-areas: 
+        "header header header header header"
+        "options options options options options"
+        "adds adds adds adds adds"
+        "content content content content content"
+    
+    }
+    .recomend{
+        display:none
+    }
+
+    .content{
+        margin-right: 0%;
+    }
+
+}
